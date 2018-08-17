@@ -6,7 +6,7 @@ setup(
     packages=['coinmetrics',],
     license='MIT',
     description = 'Python wrapper around the coinmetrics.io API.',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     author = 'Christoforou Manolis',
     author_email = 'emchristoforou@gmail.com',
     install_requires=['requests'],
