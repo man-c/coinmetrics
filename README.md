@@ -1,4 +1,4 @@
-# coinmetrics
+# Coin Metrics API wrapper
 
 Python wrapper around the [coinmetrics.io](https://coinmetrics.io/) API
 
