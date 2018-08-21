@@ -20,7 +20,7 @@ class CoinMetrics:
             if 'error' in content:
                 raise ValueError(content['error'])
             else:
-                return json.loads(response.content.decode('utf-8'))
+                return content
         except Exception as e:
             raise
 
@@ -71,7 +71,6 @@ class CoinMetrics:
 
 
     def get_all_data_types_for_all_assets(self, begin_timestamp = None,  end_timestamp = None):
-        
         # check if any timestamps
         begin_timestamp, end_timestamp = self.__check_timestamp(begin_timestamp, end_timestamp) 
         # get all available assets

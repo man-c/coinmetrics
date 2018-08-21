@@ -14,7 +14,7 @@ from coinmetrics import CoinMetrics
 cm = CoinMetrics()
 ```
 ```
- cm.get_supported_assets()
+cm.get_supported_assets()
 ['ada', 'ae', 'aion', 'ant', 'bat', 'bch', 'bnb', 'btc', 'btg', 'btm', 'cennz', 'ctxc', 'cvc', 'dash', 'dcr', 'dgb', 'doge', 'drgn', 'elf', 'eng', 'eos', 'etc', 'eth', 'ethos', 'fun', 'gas', 'gno', 'gnt', 'icn', 'icx', 'kcs', 'knc', 'loom', 'lrc', 'lsk', 'ltc', 'maid', 'mana', 'mtl', 'nas', 'neo', 'omg', 'pay', 'pivx', 'poly', 'powr', 'ppt', 'qash', 'rep', 'rhoc', 'salt', 'snt', 'srn', 'trx', 'usdt', 'ven', 'veri', 'vtc', 'waves', 'wtc', 'xem', 'xlm', 'xmr', 'xrp', 'xvg', 'zec', 'zil', 'zrx']
 ```
 
