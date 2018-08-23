@@ -2,7 +2,7 @@ import json
 import requests
 import datetime
 
-class CoinMetrics:
+class CoinMetricsAPI:
 
     __API_URL_BASE = 'https://coinmetrics.io/api/v1/'
 

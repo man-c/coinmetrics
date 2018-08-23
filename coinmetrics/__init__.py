@@ -1,1 +1,1 @@
-from .core import CoinMetrics
+from .core import CoinMetricsAPI

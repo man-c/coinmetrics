@@ -10,7 +10,7 @@ python3 setup.py install
 ### Usage
 
 ```
-from coinmetrics import CoinMetrics
+from coinmetrics import CoinMetricsAPI
 cm = CoinMetrics()
 ```
 ```
