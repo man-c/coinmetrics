@@ -26,11 +26,13 @@ class CoinMetrics:
 
 
     def __check_timestamp(self, begin_timestamp, end_timestamp):
-        # if no timestamp set yesterdays date
-        if not (begin_timestamp and end_timestamp):
+        # if both timestamps empty (None) set yesterdays date
+        if not (begin_timestamp or end_timestamp):
             yesterday = datetime.datetime.today() - datetime.timedelta(1)
             begin_timestamp = int(datetime.datetime(yesterday.year, yesterday.month, yesterday.day).timestamp())
             end_timestamp = int(datetime.datetime(yesterday.year, yesterday.month, yesterday.day, 23, 59).timestamp())
+        elif begin_timestamp and not end_timestamp: # if one only timestamp (begin), set it also as end timestamp
+            end_timestamp = begin_timestamp
         return begin_timestamp, end_timestamp
 
 
