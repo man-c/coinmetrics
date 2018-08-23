@@ -11,7 +11,7 @@ python3 setup.py install
 
 ```
 from coinmetrics import CoinMetricsAPI
-cm = CoinMetrics()
+cm = CoinMetricsAPI()
 ```
 ```
 cm.get_supported_assets()
