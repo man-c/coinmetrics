@@ -7,6 +7,15 @@ Python wrapper around the [coinmetrics.io](https://coinmetrics.io/) API (V1)
 python3 setup.py install
 ```
 
+### Test
+
+Run unit tests with:
+
+```
+# after installing pytest using pip3
+pytest tests
+```
+
 ### Usage
 
 ```
