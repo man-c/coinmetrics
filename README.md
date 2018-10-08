@@ -1,6 +1,6 @@
 # Coin Metrics API wrapper
 
-Python wrapper around the [coinmetrics.io](https://coinmetrics.io/) API (V1)
+Python3 wrapper around the [coinmetrics.io](https://coinmetrics.io/) API (V1)
 
 ### Installation
 ```
