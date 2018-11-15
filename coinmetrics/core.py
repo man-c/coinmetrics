@@ -2,6 +2,9 @@ import json
 import requests
 import datetime
 
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
+
 class CoinMetricsAPI:
 
     __API_URL_BASE = 'https://coinmetrics.io/api/v1/'
@@ -10,10 +13,14 @@ class CoinMetricsAPI:
         self.api_base_url = api_base_url
         self.request_timeout = 120
 
+        self.session = requests.Session()
+        retries = Retry(total=5, backoff_factor=0.5, status_forcelist=[ 502, 503, 504 ])
+        self.session.mount('http://', HTTPAdapter(max_retries=retries))
+
 
     def __request(self, url):
         try:
-            response = requests.get(url, timeout = self.request_timeout)
+            response = self.session.get(url, timeout = self.request_timeout)
             response.raise_for_status()
             #if response.status_code == 200:
             content = json.loads(response.content.decode('utf-8'))
